@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سكينة للسفر | Sakina Voyages</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--card:#fff;--tx:#12203a;--mut:#667089;--gold:#b8892b;--navy:#0a1a33;--line:#e4dfd3;--sh:0 12px 40px rgba(10,26,51,.1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08111f;--card:#101e35;--tx:#eef1f7;--mut:#9aa6bd;--line:#22324f;--sh:0 12px 40px rgba(0,0,0,.45)}}
+:root[data-theme="dark"]{--bg:#08111f;--card:#101e35;--tx:#eef1f7;--mut:#9aa6bd;--line:#22324f;--sh:0 12px 40px rgba(0,0,0,.45)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{font-family:Cairo,Tahoma,sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;line-height:1.8}
+nav{position:fixed;top:0;inset-inline:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 12px) 6% 12px;color:#fff;transition:.4s;animation:down .9s both}
+@keyframes down{from{transform:translateY(-100%)}}
+nav.s{background:rgba(10,26,51,.96);box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.logo{font-weight:800;font-size:1.3rem;color:#fff;text-decoration:none;letter-spacing:.5px}.logo b{color:var(--gold)}
+.links a{color:#fff;text-decoration:none;margin-inline-start:1.6rem;font-size:.92rem;position:relative;opacity:.9}
+.links a:after{content:"";position:absolute;bottom:-4px;right:0;width:0;height:2px;background:var(--gold);transition:.3s}
+.links a:hover:after{width:100%}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;color:#fff;position:relative;overflow:hidden;padding:120px 6% 110px;background:radial-gradient(circle at 70% 20%,#17407a 0,transparent 55%),linear-gradient(160deg,#050f20,#0a1a33 60%,#0c2d4d)}
+.hero:before{content:"";position:absolute;inset:-50%;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:60px 60px;animation:grid 30s linear infinite;transform:perspective(500px) rotateX(60deg);transform-origin:center 70%}
+@keyframes grid{to{background-position:0 600px}}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.1;transform:scale(2)}}
+.orb{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(#b8892b55,transparent 70%);animation:orb 12s ease-in-out infinite}
+@keyframes orb{50%{transform:translate(-80px,60px) scale(1.2)}}
+.plane{position:absolute;font-size:2rem;top:0;right:0;offset-path:path("M-50 420 Q 400 60 1300 300");offset-rotate:auto 180deg;animation:fly 12s linear infinite;filter:drop-shadow(0 0 12px #fff8)}
+@keyframes fly{from{offset-distance:0%}to{offset-distance:100%}}
+.hero .c{position:relative;max-width:820px}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:.85rem;font-weight:600;animation:up 1s .2s both}
+.hero h1{font-size:clamp(2.1rem,6.5vw,4.4rem);font-weight:800;line-height:1.25;margin:.6rem 0 1rem;animation:up 1s .4s both}
+.hero h1 span{background:linear-gradient(90deg,#e9c46a,#fff,#e9c46a);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:200%}}
+.hero p{opacity:.85;font-size:1.1rem;max-width:620px;margin:0 auto 2rem;animation:up 1s .6s both}
+.hero .b{animation:up 1s .8s both}
+@keyframes up{from{opacity:0;transform:translateY(40px)}}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:.85rem 2.2rem;border-radius:6px;background:var(--gold);color:#fff;text-decoration:none;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.btn:after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(90deg,transparent,#fff6,transparent);transform:skewX(-20deg);animation:sw 3.5s infinite}
+@keyframes sw{to{left:150%}}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px #b8892b66}
+.btn.o{background:transparent;border:1.5px solid #fff8;margin-inline-start:.7rem}
+.scroll{position:absolute;bottom:26px;left:50%;width:22px;height:36px;border:2px solid #fff9;border-radius:12px}
+.scroll:after{content:"";position:absolute;top:6px;left:50%;width:4px;height:7px;margin-left:-2px;background:#fff;border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{to{transform:translateY(14px);opacity:0}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));max-width:1000px;margin:-55px auto 0;position:relative;z-index:5;background:var(--card);border-radius:14px;box-shadow:var(--sh);padding:.5rem}
+.stat{text-align:center;padding:1.1rem;border-inline-end:1px solid var(--line)}.stat:last-child{border:0}
+.stat b{display:block;font-size:2rem;color:var(--gold);font-weight:800}.stat span{color:var(--mut);font-size:.9rem}
+section{padding:90px 6%;max-width:1250px;margin:auto}
+.hd{text-align:center;margin-bottom:2.4rem}
+.hd small{color:var(--gold);letter-spacing:3px;font-weight:600}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800}
+.hd i{display:block;width:70px;height:3px;background:var(--gold);margin:.6rem auto 0;transform:scaleX(0);transition:transform 1s .3s}
+.hd.in i{transform:none}
+.sub{color:var(--mut)}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1.1rem}
+.co{border-radius:16px;overflow:hidden;position:relative;height:250px;cursor:pointer;box-shadow:var(--sh);border:3px solid transparent;transition:transform .4s,border-color .3s;background:#000}
+.co svg{position:absolute;inset:0;width:100%;height:100%;transition:transform 1s}
+.co:hover svg{transform:scale(1.12)}.co:hover{transform:translateY(-8px)}
+.co.on{border-color:var(--gold)}
+.co img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform 1s}.co:hover img{transform:scale(1.12)}.co .t{z-index:2;position:absolute;inset-inline:0;bottom:0;padding:2.5rem 1rem .9rem;color:#fff;background:linear-gradient(transparent,#000b)}
+.co .f{font-size:2rem;display:block;line-height:1.2}
+.co b{font-size:1.15rem}.co small{display:block;opacity:.8}
+.panel{margin-top:3rem;background:var(--card);border-radius:20px;box-shadow:var(--sh);overflow:hidden}
+.ph{padding:1.6rem 2rem;color:#fff;position:relative;overflow:hidden;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.ph h3{font-size:1.6rem}.ph p{opacity:.85}
+.ph .big{font-size:3.4rem;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(5deg)}}
+.of{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;padding:1.6rem}
+.o1{border:1px solid var(--line);border-radius:14px;padding:1.3rem;position:relative;animation:up .7s calc(var(--i)*.12s) backwards;transition:transform .3s,box-shadow .3s,border-color .3s;background:var(--bg)}
+.o1:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:var(--gold)}
+.o1 .tg{position:absolute;top:-1px;left:16px;background:var(--gold);color:#fff;font-size:.75rem;padding:.1rem .8rem;border-radius:0 0 8px 8px}
+.o1 h4{font-size:1.1rem;margin:.4rem 0}.o1 ul{list-style:none;padding:0;color:var(--mut);font-size:.9rem}
+.o1 ul li:before{content:"✓ ";color:var(--gold);font-weight:700}
+.pr{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;padding-top:.9rem;border-top:1px dashed var(--line)}
+.pr b{font-size:1.5rem;color:var(--gold)}.pr small{color:var(--mut)}
+.pr button{border:0;background:var(--navy);color:#fff;padding:.5rem 1.2rem;border-radius:6px;font:inherit;cursor:pointer;transition:.3s}
+.pr button:hover{background:var(--gold)}
+.rv{opacity:0;transform:translateY(50px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.omra{background:linear-gradient(135deg,#0a1a33,#0d4a3a);color:#fff;border-radius:20px;padding:2.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;align-items:center;position:relative;overflow:hidden;box-shadow:var(--sh)}
+.omra:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(#b8892b66,transparent 70%);top:-120px;left:-80px;animation:orb 9s ease-in-out infinite}
+.omra>*{position:relative}.omra h2{text-align:right}
+.cd{display:flex;gap:.7rem;justify-content:center}
+.cd div{background:#ffffff1a;border:1px solid #ffffff2a;border-radius:10px;padding:.7rem .9rem;text-align:center;min-width:66px;font-size:.85rem}
+.cd b{display:block;font-size:1.7rem;color:#e9c46a}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.2rem;counter-reset:s}
+.step{background:var(--card);padding:1.7rem 1.3rem;border-radius:14px;box-shadow:var(--sh);position:relative;overflow:hidden;transition:transform .3s}
+.step:hover{transform:translateY(-6px)}
+.step:before{counter-increment:s;content:"0" counter(s);position:absolute;top:-8px;left:10px;font-size:4.5rem;font-weight:800;color:var(--gold);opacity:.14}
+.step b{color:var(--gold);display:block;font-size:1.1rem}.step p{color:var(--mut);font-size:.92rem}
+footer{background:var(--navy);color:#fff;text-align:center;padding:2.6rem 6%}
+footer h3{color:#e9c46a}footer p{opacity:.8}
+.wa{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);left:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:1.7rem;text-decoration:none;box-shadow:0 6px 20px #0005;animation:pl 2.4s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 #25d366aa}70%{box-shadow:0 0 0 18px #25d36600}}
+.modal{position:fixed;inset:0;background:#000a;display:none;place-items:center;z-index:100;padding:1rem;backdrop-filter:blur(6px)}
+.modal.on{display:grid}
+.box{background:var(--card);border-radius:18px;padding:1.8rem;width:min(430px,100%);animation:pop .45s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.box input{width:100%;padding:.75rem;margin:.4rem 0;border-radius:8px;border:1.5px solid var(--line);font:inherit;background:var(--bg);color:var(--tx)}
+.box input:focus{outline:0;border-color:var(--gold)}
+@media(max-width:700px){.links{display:none}.btn.o{margin:.7rem 0 0}.plane{display:none}section{padding:70px 5%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv,.o1{opacity:1;transform:none}}
+.tb{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.6rem}
+.tbn{border:1.5px solid var(--gold);background:transparent;color:var(--tx);font:inherit;padding:.4rem 1.3rem;border-radius:30px;cursor:pointer;transition:.3s}
+.tbn.on,.tbn:hover{background:var(--gold);color:#fff}
+.gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;padding:1.4rem 1.6rem 0}
+.gl div{height:140px;border-radius:12px;overflow:hidden;background:var(--line);animation:up .7s calc(var(--i)*.12s) backwards}
+.gl img,.oi img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gl div:hover img,.o1:hover .oi img{transform:scale(1.15)}
+.oi{height:150px;margin:-1.3rem -1.3rem 1rem;border-radius:14px 14px 0 0;overflow:hidden;background:var(--line)}
+.o1 .tg{top:10px;z-index:2;border-radius:8px}
+img[data-t]{opacity:0;transition:opacity .9s,transform .8s}img[data-t].ok{opacity:1}
+.fl{width:34px!important;height:auto!important;border-radius:4px;display:inline-block;box-shadow:0 2px 8px #0005;vertical-align:middle}
+.ph .big .fl{width:64px!important}
+</style>
+</head>
+<body>
+<nav id="nav"><a class="logo" href="#top">سكينة <b>للسفر</b></a><div class="links"><a href="#dest">الوجهات</a><a href="#omra">العمرة</a><a href="#how">كيف نعمل</a><a href="#contact">تواصل</a></div></nav>
+
+<header class="hero" id="top">
+<div class="orb" style="top:-100px;right:-100px"></div><div class="orb" style="bottom:-160px;left:-120px;animation-delay:-5s"></div>
+<div id="stars"></div><div class="plane">✈️</div>
+<div class="c"><div class="eyebrow">SAKINA VOYAGES · وكالة سفر معتمدة</div>
+<h1>نصحبك إلى أجمل<br><span>وجهات العالم</span></h1>
+<p>عمرة وحج وسياحة إلى أفضل الدول، بعروض مدروسة وخدمة متكاملة من الحجز حتى العودة.</p>
+<div class="b"><a class="btn" href="#dest">تصفّح الدول والعروض</a><a class="btn o" href="#omra">عمرة 2026</a></div></div>
+<div class="scroll"></div>
+</header>
+
+<div class="stats rv">
+<div class="stat"><b data-n="12000">0</b><span>مسافر</span></div>
+<div class="stat"><b data-n="35">0</b><span>وجهة</span></div>
+<div class="stat"><b data-n="10">0</b><span>سنوات خبرة</span></div>
+<div class="stat"><b data-n="98">0</b><span>% رضا العملاء</span></div>
+</div>
+
+<section id="dest">
+<div class="hd rv"><small>DESTINATIONS</small><h2>اختر الدولة</h2><i></i><p class="sub">اضغط على أي دولة لعرض صورها وعروضها (عروض تجريبية)</p></div>
+<div class="tb" id="tb"></div><div class="cg" id="cg"></div>
+<div class="panel rv" id="panel"></div>
+</section>
+
+<section id="omra" style="padding-top:0">
+<div class="omra rv">
+<div><h2>عمرة 2026</h2><p style="margin:.8rem 0 1.3rem;opacity:.9">التسجيل مفتوح: سبتمبر – أكتوبر – نوفمبر – ديسمبر. إقامة قريبة من الحرم ومتابعة كاملة.</p><button class="btn" onclick="book('باقة العمرة 2026')">سجّل الآن</button></div>
+<div><p style="text-align:center;margin-bottom:.7rem">الدفعة القادمة بعد</p><div class="cd" id="cd"></div></div>
+</div></section>
+
+<section id="how" style="padding-top:0">
+<div class="hd rv"><small>PROCESS</small><h2>رحلتك في 4 خطوات</h2><i></i></div>
+<div class="steps">
+<div class="step rv"><b>اختر وجهتك</b><p>تصفح الدول واختر العرض المناسب.</p></div>
+<div class="step rv"><b>سجّل بياناتك</b><p>نموذج سريع وآمن.</p></div>
+<div class="step rv"><b>نجهّز الوثائق</b><p>التأشيرة والحجوزات علينا.</p></div>
+<div class="step rv"><b>سافر بسكينة</b><p>متابعة معك طوال الرحلة.</p></div>
+</div></section>
+
+<footer id="contact"><h3>تواصل معنا</h3><p>هاتف: 00 000 000 · info@example.com</p><p style="opacity:.5;margin-top:.5rem">© 2026 سكينة للسفر</p></footer>
+<a class="wa" href="#" aria-label="واتساب">💬</a>
+<div class="modal" id="m"><div class="box"><h3 id="mt" style="margin-bottom:.6rem">حجز</h3>
+<input id="n" placeholder="الاسم"><input id="p" placeholder="رقم الهاتف" inputmode="tel">
+<button class="btn" style="width:100%;margin-top:.6rem" onclick="send()">تأكيد الطلب</button>
+<p id="ok" style="color:#1c8a5a;text-align:center;margin-top:.6rem"></p></div></div>
+
+<script>
+const WC={};
+const wp=t=>WC[t]||(WC[t]=fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(t)).then(r=>r.json()).then(j=>{const u=(j.thumbnail&&j.thumbnail.source)||(j.originalimage&&j.originalimage.source);return u?u.replace(/\/\d+px-/,'/960px-'):null}).catch(()=>null));
+function hydrate(root){root.querySelectorAll('img[data-t]').forEach(im=>wp(im.dataset.t).then(u=>{if(u){im.onload=()=>im.classList.add('ok');im.onerror=()=>im.remove();im.src=u}else im.remove()}))}
+const fl=c=>`<img class="fl" src="https://flagcdn.com/w80/${c.f}.png" alt="">`;
+const C=[
+{g:0,n:"السعودية",f:"sa",t:"dome",a:"#0b3d2e",b:"#c9a227",d:"مكة المكرمة والمدينة المنورة",p:["Kaaba", "Prophet's_Mosque", "Kingdom_Centre", "Jeddah"],o:[["عمرة اقتصادية","10 ليالٍ",1450,"الأكثر طلباً",["فندق قريب","طيران","مرشد"]],["عمرة VIP","14 ليلة",2400,"فاخر",["5 نجوم","نقل خاص","وجبات"]],["عمرة رمضان","15 ليلة",2900,"موسمي",["بجوار الحرم","تأشيرة","مرشد"]]]},
+{g:0,n:"تركيا",f:"tr",t:"dome",a:"#7a1f3d",b:"#ff9f43",d:"إسطنبول وكابادوكيا وطرابزون",p:["Hagia_Sophia", "Bosphorus", "Cappadocia", "Uzungöl"],o:[["إسطنبول الكلاسيكية","7 ليالٍ",980,"خصم 15%",["فندق 4 نجوم","جولات","نقل"]],["كابادوكيا والبالون","6 ليالٍ",1100,"مغامرة",["بالون","فندق كهفي","نقل"]],["طرابزون","8 ليالٍ",890,"طبيعة",["أوزنجول","فندق","رحلات"]]]},
+{g:0,n:"الإمارات",f:"ae",t:"tower",a:"#12406b",b:"#6ec1ff",d:"دبي وأبوظبي",p:["Burj_Khalifa", "Sheikh_Zayed_Grand_Mosque", "Dubai_Marina", "Palm_Jumeirah"],o:[["دبي سيتي","5 ليالٍ",1200,"الأكثر طلباً",["برج خليفة","سفاري","فندق"]],["دبي وأبوظبي","7 ليالٍ",1650,"مميز",["جامع زايد","فيراري وورلد","نقل"]]]},
+{g:0,n:"مصر",f:"eg",t:"pyr",a:"#a45d1a",b:"#ffd27a",d:"القاهرة والأقصر وشرم الشيخ",p:["Giza_pyramid_complex", "Karnak", "Sharm_El_Sheikh", "Abu_Simbel_temples"],o:[["القاهرة والأهرامات","5 ليالٍ",650,"عرض خاص",["الأهرامات","المتحف","فندق"]],["شرم الشيخ","6 ليالٍ",720,"شاطئ",["شامل","غوص","نقل"]]]},
+{g:0,n:"ماليزيا",f:"my",t:"tower",a:"#4b2a86",b:"#ff7ab8",d:"كوالالمبور ولنكاوي",p:["Petronas_Towers", "Langkawi", "Batu_Caves", "George_Town,_Penang"],o:[["كوالالمبور","6 ليالٍ",1100,"جديد",["بتروناس","جنتنج","فندق"]],["لنكاوي","9 ليالٍ",1600,"شهر العسل",["تلفريك","جزر","فندق"]]]},
+{g:0,n:"المالديف",f:"mv",t:"palm",a:"#0a7ea4",b:"#7ff0e0",d:"جزر ومنتجعات",p:["Maldives", "Malé", "Baa_Atoll", "Ari_Atoll"],o:[["منتجع شاطئي","5 ليالٍ",2300,"شهر العسل",["فيلا مائية","إفطار","نقل بحري"]],["جزيرة اقتصادية","4 ليالٍ",1500,"اقتصادي",["فندق","غوص","نقل"]]]},
+{g:1,n:"فرنسا",f:"fr",t:"tower",a:"#1b2f6b",b:"#f4a6c0",d:"باريس والريفييرا",p:["Eiffel_Tower", "Louvre", "Palace_of_Versailles", "Mont-Saint-Michel"],o:[["باريس الرومانسية","6 ليالٍ",1900,"الأكثر طلباً",["برج إيفل","اللوفر","فندق"]],["باريس ونيس","9 ليالٍ",2700,"مميز",["قطار","ريفييرا","فندق"]]]},
+{g:1,n:"إيطاليا",f:"it",t:"dome",a:"#7a2a1b",b:"#f2c078",d:"روما والبندقية وفلورنسا",p:["Colosseum", "Venice", "Florence_Cathedral", "Amalfi_Coast"],o:[["روما وفلورنسا","7 ليالٍ",1850,"كلاسيكي",["الكولوسيوم","الفاتيكان","فندق"]],["البندقية وأمالفي","8 ليالٍ",2300,"شهر العسل",["قوارب","ساحل","فندق"]]]},
+{g:1,n:"سويسرا",f:"ch",t:"pyr",a:"#26527a",b:"#e8f3ff",d:"زيورخ ولوسيرن والألب",p:["Matterhorn", "Chapel_Bridge", "Lake_Lucerne", "Jungfraujoch"],o:[["الألب السويسرية","7 ليالٍ",2600,"طبيعة",["قطار الجبال","بحيرات","فندق"]],["زيورخ ولوسيرن","5 ليالٍ",2100,"عائلي",["جولات","شوكولاتة","فندق"]]]},
+{g:1,n:"إسبانيا",f:"es",t:"dome",a:"#8a1f1f",b:"#ffcf66",d:"برشلونة ومدريد وغرناطة",p:["Sagrada_Família", "Alhambra", "Royal_Palace_of_Madrid", "Seville_Cathedral"],o:[["برشلونة ومدريد","8 ليالٍ",1750,"خصم 10%",["ساغرادا","قطار","فندق"]],["الأندلس","7 ليالٍ",1650,"تاريخ",["الحمراء","إشبيلية","فندق"]]]},
+{g:1,n:"بريطانيا",f:"gb",t:"tower",a:"#1f2a44",b:"#9fb3d1",d:"لندن وإدنبرة",p:["Big_Ben", "Tower_Bridge", "Edinburgh_Castle", "Stonehenge"],o:[["لندن","6 ليالٍ",2000,"الأكثر طلباً",["بيج بن","العين","فندق"]],["لندن وإدنبرة","9 ليالٍ",2800,"مميز",["قطار","قلعة","فندق"]]]},
+{g:1,n:"اليابان",f:"jp",t:"pyr",a:"#8c1c3a",b:"#ffd6e0",d:"طوكيو وكيوتو",p:["Mount_Fuji", "Tokyo_Tower", "Fushimi_Inari-taisha", "Osaka_Castle"],o:[["طوكيو وكيوتو","9 ليالٍ",3100,"ربيع الساكورا",["قطار سريع","معابد","فندق"]],["طوكيو وفوجي","7 ليالٍ",2600,"مغامرة",["جبل فوجي","جولات","فندق"]]]},
+{g:1,n:"تايلاند",f:"th",t:"palm",a:"#0e6f6a",b:"#ffd27a",d:"بانكوك وبوكيت",p:["Wat_Arun", "Phi_Phi_Islands", "Grand_Palace", "Phuket_Province"],o:[["بانكوك وبوكيت","8 ليالٍ",1300,"اقتصادي",["معابد","جزر","فندق"]],["شيانغ ماي","6 ليالٍ",1000,"طبيعة",["محميات","أسواق","فندق"]]]}
+];
+let u=0;
+function art(t,a,b){const id='g'+(u++);const s={
+dome:'<ellipse cx="110" cy="130" rx="46" ry="42" fill="#0007"/><rect x="64" y="130" width="92" height="80" fill="#0006"/><rect x="26" y="80" width="10" height="130" fill="#0007"/><rect x="184" y="80" width="10" height="130" fill="#0007"/><path d="M31 62l-6 18h12zM189 62l-6 18h12z" fill="#0007"/><path d="M110 78v-14" stroke="#0008" stroke-width="3"/>',
+tower:'<rect x="30" y="130" width="28" height="90" fill="#0006"/><rect x="160" y="100" width="34" height="120" fill="#0006"/><path d="M104 220l6-150 6 150z" fill="#0008"/><rect x="72" y="150" width="22" height="70" fill="#0005"/><rect x="128" y="140" width="24" height="80" fill="#0005"/>',
+pyr:'<path d="M0 200L80 90l80 110z" fill="#0004"/><path d="M90 200L160 115l70 85z" fill="#0006"/><path d="M0 210h230v-14H0z" fill="#0007"/>',
+palm:'<path d="M0 185q110 20 230 0v40H0z" fill="#0006"/><path d="M115 190q-6-50 10-85" stroke="#0008" stroke-width="5" fill="none"/><path d="M125 105q-30-20-52 0M125 105q30-25 56-5M125 105q-5-35-25-40M125 105q10-35 36-35" stroke="#0008" stroke-width="6" fill="none" stroke-linecap="round"/>'}[t];
+return `<svg viewBox="0 0 220 260" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="220" height="260" fill="url(#${id})"/><circle cx="170" cy="55" r="20" fill="#fff" opacity=".85"><animate attributeName="r" values="20;25;20" dur="4s" repeatCount="indefinite"/></circle><g transform="translate(0,40)">${s}</g></svg>`}
+let F=-1;
+tb.innerHTML=[['الكل',-1],['دول عربية وإسلامية',0],['دول أجنبية',1]].map(([l,v])=>`<button class="tbn${v==-1?' on':''}" onclick="flt(${v},this)">${l}</button>`).join('');
+function draw(){cg.innerHTML=C.map((c,i)=>F<0||c.g==F?`<div class="co rv in" data-i="${i}" onclick="show(${i},1)">${art(c.t,c.a,c.b)}<img data-t="${c.p[0]}" alt="${c.n}"><div class="t"><span class="f">${fl(c)}</span><b>${c.n}</b><small>${c.o.length} عروض</small></div></div>`:'').join('');hydrate(cg)}
+function flt(v,el){F=v;document.querySelectorAll('.tbn').forEach(b=>b.classList.toggle('on',b==el));draw()}
+draw();
+function show(i,sc){const c=C[i];document.querySelectorAll('.co').forEach(e=>e.classList.toggle('on',e.dataset.i==i));
+panel.classList.add('in');
+const im=k=>`<img data-t="${k}" alt="">`;
+panel.innerHTML=`<div class="ph" style="background:linear-gradient(120deg,${c.a}ee,${c.b}99)"><div><h3>عروض ${c.n}</h3><p>${c.d}</p></div><span class="big">${fl(c)}</span></div><div class="gl">`+c.p.map((k,j)=>`<div style="--i:${j}">${im(k,i*10+j+20)}</div>`).join('')+`</div><div class="of">`+c.o.map((o,k)=>`<div class="o1" style="--i:${k}"><div class="oi">${im(c.p[k%4],i*10+k+60)}</div><span class="tg">${o[3]}</span><h4>${o[0]}</h4><small style="color:var(--mut)">🌙 ${o[1]}</small><ul>${o[4].map(x=>`<li>${x}</li>`).join('')}</ul><div class="pr"><div><small>يبدأ من</small><br><b>$${o[2]}</b></div><button onclick="book('${c.n} - ${o[0]}')">احجز</button></div></div>`).join('')+'</div>';
+hydrate(panel);if(sc)panel.scrollIntoView({behavior:'smooth',block:'start'})}
+show(0);
+const st=document.getElementById('stars');for(let i=0;i<40;i++){const s=document.createElement('i');s.className='star';s.style.cssText=`top:${Math.random()*100}%;left:${Math.random()*100}%;animation-delay:${Math.random()*3}s`;st.appendChild(s)}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');if(x.target.querySelector('[data-n]'))cnt(x.target);io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv,.hd').forEach((el,i)=>{el.style.transitionDelay=(i%5)*80+'ms';io.observe(el)});
+function cnt(r){r.querySelectorAll('[data-n]').forEach(e=>{const n=+e.dataset.n;let v=0;const t=setInterval(()=>{v+=n/60;if(v>=n){v=n;clearInterval(t)}e.textContent=Math.round(v).toLocaleString('en')},25)})}
+addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>60),{passive:true});
+if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.co').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*-14}deg) rotateX(${y*-14}deg) translateY(-8px)`});c.addEventListener('mouseleave',()=>c.style.transform='')});
+const end=new Date();end.setDate(end.getDate()+21);
+setInterval(()=>{let s=Math.max(0,end-Date.now())/1e3|0;cd.innerHTML=[['يوم',86400],['ساعة',3600],['دقيقة',60],['ثانية',1]].map(([l,k])=>{const v=s/k|0;s%=k;return `<div><b>${v}</b>${l}</div>`}).join('')},1000);
+function book(n){mt.textContent='حجز: '+n;ok.textContent='';m.classList.add('on')}
+m.onclick=e=>{if(e.target==m)m.classList.remove('on')};
+function send(){ok.textContent='✔ تم استلام طلبك (عرض تجريبي)';setTimeout(()=>m.classList.remove('on'),2000)}
+</script>
+</body>
+</html>
