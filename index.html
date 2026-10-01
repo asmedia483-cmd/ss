@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>سكينة للسفر | Sakina Voyages</title>
+<title>Sakina Voyages</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f7f5f0;--card:#fff;--tx:#12203a;--mut:#667089;--gold:#b8892b;--navy:#0a1a33;--line:#e4dfd3;--sh:0 12px 40px rgba(10,26,51,.1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -81,7 +81,7 @@ h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800}
 .rv.in{opacity:1;transform:none}
 .omra{background:linear-gradient(135deg,#0a1a33,#0d4a3a);color:#fff;border-radius:20px;padding:2.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;align-items:center;position:relative;overflow:hidden;box-shadow:var(--sh)}
 .omra:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(#b8892b66,transparent 70%);top:-120px;left:-80px;animation:orb 9s ease-in-out infinite}
-.omra>*{position:relative}.omra h2{text-align:right}
+.omra>*{position:relative}.omra h2{text-align:start}
 .cd{display:flex;gap:.7rem;justify-content:center}
 .cd div{background:#ffffff1a;border:1px solid #ffffff2a;border-radius:10px;padding:.7rem .9rem;text-align:center;min-width:66px;font-size:.85rem}
 .cd b{display:block;font-size:1.7rem;color:#e9c46a}
@@ -114,10 +114,11 @@ footer h3{color:#e9c46a}footer p{opacity:.8}
 img[data-t]{opacity:0;transition:opacity .9s,transform .8s}img[data-t].ok{opacity:1}
 .fl{width:34px!important;height:auto!important;border-radius:4px;display:inline-block;box-shadow:0 2px 8px #0005;vertical-align:middle}
 .ph .big .fl{width:64px!important}
+.lgb{border:1.5px solid var(--gold);background:transparent;color:#fff;font:inherit;padding:.25rem 1rem;border-radius:30px;cursor:pointer;transition:.3s}.lgb:hover{background:var(--gold)}
 </style>
 </head>
 <body>
-<nav id="nav"><a class="logo" href="#top">سكينة <b>للسفر</b></a><div class="links"><a href="#dest">الوجهات</a><a href="#omra">العمرة</a><a href="#how">كيف نعمل</a><a href="#contact">تواصل</a></div></nav>
+<nav id="nav"><a class="logo" href="#top">سكينة <b>للسفر</b></a><div class="links"><a href="#dest">الوجهات</a><a href="#omra">العمرة</a><a href="#how">كيف نعمل</a><a href="#contact">تواصل</a></div><button class="lgb" id="lg" onclick="setL(L=='fr'?'ar':'fr')"></button></nav>
 
 <header class="hero" id="top">
 <div class="orb" style="top:-100px;right:-100px"></div><div class="orb" style="bottom:-160px;left:-120px;animation-delay:-5s"></div>
@@ -165,6 +166,13 @@ img[data-t]{opacity:0;transition:opacity .9s,transform .8s}img[data-t].ok{opacit
 <p id="ok" style="color:#1c8a5a;text-align:center;margin-top:.6rem"></p></div></div>
 
 <script>
+const FR={"سكينة": "Sakina", "للسفر": "Voyages", "الوجهات": "Destinations", "العمرة": "Omra", "كيف نعمل": "Comment ça marche", "تواصل": "Contact", "SAKINA VOYAGES · وكالة سفر معتمدة": "SAKINA VOYAGES · Agence de voyages agréée", "نصحبك إلى أجمل": "Nous vous accompagnons vers les plus belles", "وجهات العالم": "destinations du monde", "عمرة وحج وسياحة إلى أفضل الدول، بعروض مدروسة وخدمة متكاملة من الحجز حتى العودة.": "Omra, Hajj et voyages vers les meilleures destinations, avec des offres soigneusement choisies et un service complet, de la réservation jusqu'au retour.", "تصفّح الدول والعروض": "Découvrir les pays et offres", "عمرة 2026": "Omra 2026", "مسافر": "Voyageurs", "وجهة": "Destinations", "سنوات خبرة": "Années d'expérience", "% رضا العملاء": "% de clients satisfaits", "اختر الدولة": "Choisissez un pays", "اضغط على أي دولة لعرض صورها وعروضها (عروض تجريبية)": "Cliquez sur un pays pour voir ses photos et ses offres (offres de démonstration)", "الكل": "Tous", "دول عربية وإسلامية": "Pays arabes et musulmans", "دول أجنبية": "Pays étrangers", "التسجيل مفتوح: سبتمبر – أكتوبر – نوفمبر – ديسمبر. إقامة قريبة من الحرم ومتابعة كاملة.": "Inscriptions ouvertes : septembre – octobre – novembre – décembre. Hébergement proche du Haram et suivi complet.", "سجّل الآن": "S'inscrire maintenant", "الدفعة القادمة بعد": "Prochain départ dans", "يوم": "jours", "ساعة": "heures", "دقيقة": "minutes", "ثانية": "secondes", "رحلتك في 4 خطوات": "Votre voyage en 4 étapes", "اختر وجهتك": "Choisissez votre destination", "تصفح الدول واختر العرض المناسب.": "Parcourez les pays et choisissez l'offre qui vous convient.", "سجّل بياناتك": "Inscrivez-vous", "نموذج سريع وآمن.": "Formulaire rapide et sécurisé.", "نجهّز الوثائق": "Nous préparons les documents", "التأشيرة والحجوزات علينا.": "Visa et réservations : on s'en occupe.", "سافر بسكينة": "Voyagez en toute sérénité", "متابعة معك طوال الرحلة.": "Un suivi à vos côtés tout au long du voyage.", "تواصل معنا": "Contactez-nous", "هاتف: 00 000 000 · info@example.com": "Tél : 00 000 000 · info@example.com", "© 2026 سكينة للسفر": "© 2026 Sakina Voyages", "حجز": "Réservation", "الاسم": "Nom complet", "رقم الهاتف": "Numéro de téléphone", "تأكيد الطلب": "Confirmer la demande", "✔ تم استلام طلبك (عرض تجريبي)": "✔ Votre demande a bien été reçue (offre de démonstration)", "يبدأ من": "À partir de", "احجز": "Réserver", "السعودية": "Arabie saoudite", "تركيا": "Turquie", "الإمارات": "Émirats arabes unis", "مصر": "Égypte", "ماليزيا": "Malaisie", "المالديف": "Maldives", "فرنسا": "France", "إيطاليا": "Italie", "سويسرا": "Suisse", "إسبانيا": "Espagne", "بريطانيا": "Royaume-Uni", "اليابان": "Japon", "تايلاند": "Thaïlande", "مكة المكرمة والمدينة المنورة": "La Mecque et Médine", "إسطنبول وكابادوكيا وطرابزون": "Istanbul, Cappadoce et Trabzon", "دبي وأبوظبي": "Dubaï et Abu Dhabi", "القاهرة والأقصر وشرم الشيخ": "Le Caire, Louxor et Charm el-Cheikh", "كوالالمبور ولنكاوي": "Kuala Lumpur et Langkawi", "جزر ومنتجعات": "Îles et complexes hôteliers", "باريس والريفييرا": "Paris et la Riviera", "روما والبندقية وفلورنسا": "Rome, Venise et Florence", "زيورخ ولوسيرن والألب": "Zurich, Lucerne et les Alpes", "برشلونة ومدريد وغرناطة": "Barcelone, Madrid et Grenade", "لندن وإدنبرة": "Londres et Édimbourg", "طوكيو وكيوتو": "Tokyo et Kyoto", "بانكوك وبوكيت": "Bangkok et Phuket", "عمرة اقتصادية": "Omra économique", "الأكثر طلباً": "Le plus demandé", "فندق قريب": "Hôtel proche", "طيران": "Vols", "مرشد": "Guide", "عمرة VIP": "Omra VIP", "فاخر": "Luxe", "5 نجوم": "5 étoiles", "نقل خاص": "Transfert privé", "وجبات": "Repas", "عمرة رمضان": "Omra du Ramadan", "موسمي": "Saisonnier", "بجوار الحرم": "Près du Haram", "تأشيرة": "Visa", "إسطنبول الكلاسيكية": "Istanbul classique", "خصم 15%": "-15 %", "فندق 4 نجوم": "Hôtel 4 étoiles", "جولات": "Visites", "نقل": "Transferts", "كابادوكيا والبالون": "Cappadoce et montgolfière", "مغامرة": "Aventure", "بالون": "Montgolfière", "فندق كهفي": "Hôtel troglodyte", "طرابزون": "Trabzon", "طبيعة": "Nature", "أوزنجول": "Lac d'Uzungöl", "فندق": "Hôtel", "رحلات": "Excursions", "دبي سيتي": "Dubaï City", "برج خليفة": "Burj Khalifa", "سفاري": "Safari", "مميز": "Premium", "جامع زايد": "Mosquée Cheikh Zayed", "فيراري وورلد": "Ferrari World", "القاهرة والأهرامات": "Le Caire et les pyramides", "عرض خاص": "Offre spéciale", "الأهرامات": "Pyramides", "المتحف": "Musée", "شرم الشيخ": "Charm el-Cheikh", "شاطئ": "Plage", "شامل": "Tout compris", "غوص": "Plongée", "كوالالمبور": "Kuala Lumpur", "جديد": "Nouveau", "بتروناس": "Tours Petronas", "جنتنج": "Genting", "لنكاوي": "Langkawi", "شهر العسل": "Lune de miel", "تلفريك": "Téléphérique", "جزر": "Îles", "منتجع شاطئي": "Complexe balnéaire", "فيلا مائية": "Villa sur pilotis", "إفطار": "Petit-déjeuner", "نقل بحري": "Transfert maritime", "جزيرة اقتصادية": "Île économique", "اقتصادي": "Économique", "باريس الرومانسية": "Paris romantique", "برج إيفل": "Tour Eiffel", "اللوفر": "Louvre", "باريس ونيس": "Paris et Nice", "قطار": "Train", "ريفييرا": "Riviera", "روما وفلورنسا": "Rome et Florence", "كلاسيكي": "Classique", "الكولوسيوم": "Colisée", "الفاتيكان": "Vatican", "البندقية وأمالفي": "Venise et Amalfi", "قوارب": "Bateaux", "ساحل": "Côte", "الألب السويسرية": "Alpes suisses", "قطار الجبال": "Train de montagne", "بحيرات": "Lacs", "زيورخ ولوسيرن": "Zurich et Lucerne", "عائلي": "Famille", "شوكولاتة": "Chocolat", "برشلونة ومدريد": "Barcelone et Madrid", "خصم 10%": "-10 %", "ساغرادا": "Sagrada Família", "الأندلس": "Andalousie", "تاريخ": "Histoire", "الحمراء": "Alhambra", "إشبيلية": "Séville", "لندن": "Londres", "بيج بن": "Big Ben", "العين": "London Eye", "قلعة": "Château", "ربيع الساكورا": "Cerisiers en fleurs", "قطار سريع": "Train à grande vitesse", "معابد": "Temples", "طوكيو وفوجي": "Tokyo et Fuji", "جبل فوجي": "Mont Fuji", "شيانغ ماي": "Chiang Mai", "محميات": "Réserves", "أسواق": "Marchés"};
+let L='fr';try{L=localStorage.getItem('lg')||'fr'}catch(e){}
+const RX=[[/^(\d+) عروض$/,'$1 offres'],[/^🌙 (\d+) (?:ليالٍ|ليلة)$/,'🌙 $1 nuits'],[/^عروض (.+)$/,(m,a)=>'Offres : '+(FR[a]||a)],[/^حجز: (.+)$/,(m,a)=>'Réservation : '+a.split(' - ').map(x=>FR[x]||x).join(' – ')]];
+function tx(s){const k=s.trim();if(!k)return s;if(FR[k])return s.replace(k,FR[k]);for(const[r,f]of RX)if(r.test(k))return s.replace(k,k.replace(r,f));return s}
+function tr(root){root=root||document.body;const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){if(n.__a===undefined)n.__a=n.nodeValue;n.nodeValue=L=='fr'?tx(n.__a):n.__a}
+root.querySelectorAll('[placeholder]').forEach(e=>{e.__p=e.__p||e.placeholder;e.placeholder=L=='fr'?(FR[e.__p]||e.__p):e.__p})}
+function setL(l){L=l;document.documentElement.lang=l;document.documentElement.dir=l=='fr'?'ltr':'rtl';lg.textContent=l=='fr'?'العربية':'Français';document.title=l=='fr'?'Sakina Voyages | Voyages, Omra et destinations':'سكينة للسفر | Sakina Voyages';tr();try{localStorage.setItem('lg',l)}catch(e){}}
 const WC={};
 const wp=t=>WC[t]||(WC[t]=fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(t)).then(r=>r.json()).then(j=>{const u=(j.thumbnail&&j.thumbnail.source)||(j.originalimage&&j.originalimage.source);return u?u.replace(/\/\d+px-/,'/960px-'):null}).catch(()=>null));
 function hydrate(root){root.querySelectorAll('img[data-t]').forEach(im=>wp(im.dataset.t).then(u=>{if(u){im.onload=()=>im.classList.add('ok');im.onerror=()=>im.remove();im.src=u}else im.remove()}))}
@@ -193,14 +201,14 @@ palm:'<path d="M0 185q110 20 230 0v40H0z" fill="#0006"/><path d="M115 190q-6-50 
 return `<svg viewBox="0 0 220 260" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="220" height="260" fill="url(#${id})"/><circle cx="170" cy="55" r="20" fill="#fff" opacity=".85"><animate attributeName="r" values="20;25;20" dur="4s" repeatCount="indefinite"/></circle><g transform="translate(0,40)">${s}</g></svg>`}
 let F=-1;
 tb.innerHTML=[['الكل',-1],['دول عربية وإسلامية',0],['دول أجنبية',1]].map(([l,v])=>`<button class="tbn${v==-1?' on':''}" onclick="flt(${v},this)">${l}</button>`).join('');
-function draw(){cg.innerHTML=C.map((c,i)=>F<0||c.g==F?`<div class="co rv in" data-i="${i}" onclick="show(${i},1)">${art(c.t,c.a,c.b)}<img data-t="${c.p[0]}" alt="${c.n}"><div class="t"><span class="f">${fl(c)}</span><b>${c.n}</b><small>${c.o.length} عروض</small></div></div>`:'').join('');hydrate(cg)}
+function draw(){cg.innerHTML=C.map((c,i)=>F<0||c.g==F?`<div class="co rv in" data-i="${i}" onclick="show(${i},1)">${art(c.t,c.a,c.b)}<img data-t="${c.p[0]}" alt="${c.n}"><div class="t"><span class="f">${fl(c)}</span><b>${c.n}</b><small>${c.o.length} عروض</small></div></div>`:'').join('');hydrate(cg);tr(cg)}
 function flt(v,el){F=v;document.querySelectorAll('.tbn').forEach(b=>b.classList.toggle('on',b==el));draw()}
 draw();
 function show(i,sc){const c=C[i];document.querySelectorAll('.co').forEach(e=>e.classList.toggle('on',e.dataset.i==i));
 panel.classList.add('in');
 const im=k=>`<img data-t="${k}" alt="">`;
 panel.innerHTML=`<div class="ph" style="background:linear-gradient(120deg,${c.a}ee,${c.b}99)"><div><h3>عروض ${c.n}</h3><p>${c.d}</p></div><span class="big">${fl(c)}</span></div><div class="gl">`+c.p.map((k,j)=>`<div style="--i:${j}">${im(k,i*10+j+20)}</div>`).join('')+`</div><div class="of">`+c.o.map((o,k)=>`<div class="o1" style="--i:${k}"><div class="oi">${im(c.p[k%4],i*10+k+60)}</div><span class="tg">${o[3]}</span><h4>${o[0]}</h4><small style="color:var(--mut)">🌙 ${o[1]}</small><ul>${o[4].map(x=>`<li>${x}</li>`).join('')}</ul><div class="pr"><div><small>يبدأ من</small><br><b>$${o[2]}</b></div><button onclick="book('${c.n} - ${o[0]}')">احجز</button></div></div>`).join('')+'</div>';
-hydrate(panel);if(sc)panel.scrollIntoView({behavior:'smooth',block:'start'})}
+hydrate(panel);tr(panel);if(sc)panel.scrollIntoView({behavior:'smooth',block:'start'})}
 show(0);
 const st=document.getElementById('stars');for(let i=0;i<40;i++){const s=document.createElement('i');s.className='star';s.style.cssText=`top:${Math.random()*100}%;left:${Math.random()*100}%;animation-delay:${Math.random()*3}s`;st.appendChild(s)}
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');if(x.target.querySelector('[data-n]'))cnt(x.target);io.unobserve(x.target)}}),{threshold:.12});
@@ -209,10 +217,11 @@ function cnt(r){r.querySelectorAll('[data-n]').forEach(e=>{const n=+e.dataset.n;
 addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>60),{passive:true});
 if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.co').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*-14}deg) rotateX(${y*-14}deg) translateY(-8px)`});c.addEventListener('mouseleave',()=>c.style.transform='')});
 const end=new Date();end.setDate(end.getDate()+21);
-setInterval(()=>{let s=Math.max(0,end-Date.now())/1e3|0;cd.innerHTML=[['يوم',86400],['ساعة',3600],['دقيقة',60],['ثانية',1]].map(([l,k])=>{const v=s/k|0;s%=k;return `<div><b>${v}</b>${l}</div>`}).join('')},1000);
-function book(n){mt.textContent='حجز: '+n;ok.textContent='';m.classList.add('on')}
+setInterval(()=>{let s=Math.max(0,end-Date.now())/1e3|0;cd.innerHTML=[['يوم',86400],['ساعة',3600],['دقيقة',60],['ثانية',1]].map(([l,k])=>{const v=s/k|0;s%=k;return `<div><b>${v}</b>${l}</div>`}).join('');tr(cd)},1000);
+function book(n){mt.textContent='حجز: '+n;ok.textContent='';tr(m);m.classList.add('on')}
 m.onclick=e=>{if(e.target==m)m.classList.remove('on')};
-function send(){ok.textContent='✔ تم استلام طلبك (عرض تجريبي)';setTimeout(()=>m.classList.remove('on'),2000)}
+function send(){ok.textContent='✔ تم استلام طلبك (عرض تجريبي)';tr(ok);setTimeout(()=>m.classList.remove('on'),2000)}
+setL(L);
 </script>
 </body>
 </html>
